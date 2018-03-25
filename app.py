@@ -7,6 +7,7 @@ app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'ubuntu'
 app.config['MYSQL_PASSWORD'] = 'cafe'
 app.config['MYSQL_DB'] = 'cafeteria'
+app.config['MYSQL_PORT'] = '80'
 mysql = MySQL(app)
 cur = mysql.connection.cursor()
 
