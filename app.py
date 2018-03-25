@@ -25,6 +25,11 @@ def selection():
 def menu():
 	return render_template('menu.html')
 
+@app.route('/detail')
+def menu():
+
+	return render_template('detail.html')
+
 #test connection to MySQL database
 @app.route('/db')
 def connect():
