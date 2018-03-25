@@ -33,8 +33,15 @@ def menu():
 
 @app.route('/detail')
 def menu():
-
 	return render_template('detail.html')
+
+@app.route('/checkout')
+def menu():
+	return render_template('checkout.html')
+
+@app.route('/pickuptime')
+def menu():
+	return render_template('pickuptime.html')
 
 #test connection to MySQL database
 @app.route('/db')
