@@ -1,40 +1,122 @@
 ﻿<!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Order NYU</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<body class="w3-content" style="max-width:500px">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+    body, h1, h2, h3, h4, h5, h6 {
+        font-family: "Karma", sans-serif
+    }
 
-<div class="w3-panel">
-  <i class="w3-xlarge fa fa-bars"></i>
-</div>
-<!-- First Grid: Logo & About -->
-<div class="w3-row">
-<div class="w3-half w3-container">
-  <h1 class="w3-xxlarge w3-text-black">Back</h1>
-  <h1 class="w3-jumbo">Salmon Fillet</h1>
-</div>
-<div class="w3-half w3-container w3-xlarge w3-text-grey">
-  <p class="">Baked salmon fillet with a soy sauce glaze seasoned with parsley, garlic, paprika, cilantro and a slice of lemon. Comes over a pilaf of rice and with a side salad.</p>
-</div>
-</div>
+    .w3-bar-block .w3-bar-item {
+        padding: 20px
+    }
+</style>
+<body>
 
-<!-- Second Grid: Resent -->
-<div class="w3-panel w3-text-grey">
-<h4>MOST RECENT WORK:</h4>
-</div>
-<div class="w3-row">
-<div class="w3-half w3-container">
-  <img src="/w3images/house1.jpg" style="width:100%">
+    <!-- Sidebar (hidden by default) -->
+    <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()"
+           class="w3-bar-item w3-button">Close Menu</a>
+        <a href="./homepage.html" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
+        <a href="./selection.html" onclick="w3_close()" class="w3-bar-item w3-button">Dining Halls</a>
+        <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Food</a>
+        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+        <a href="" onclick="w3_close()" class="w3-bar-item w3-button">View Existing Order</a>
+        <a href="" onclick="w3_close()" class="w3-bar-item w3-button">View Order History</a>
 
-</div>
+    </nav>
 
-<!-- Footer -->
+    <!-- Top menu -->
+    <div class="w3-top" style="background-color:#9c27b0">
+        <div class="w3-purple w3-xlarge" style="max-width:1200px;margin:auto">
+            <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">&#9776;</div>
+            <div class="w3-button w3-padding-16 w3-right"><a href="checkout.html" style="text-decoration:none;">View Cart</a></div>
+            <div class="w3-center w3-padding-16">Order NYU</div>
+        </div>
+    </div>
 
-  <p>Add to my Cart: <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</div>
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main w3-content w3-padding" style="max-width:1000%;margin-left:300px;margin-top:15%">
+        
+        <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+            <div class="w3-quarter">
+                <a href="./detail.html"><img src="https://drive.google.com/uc?id=1f5daWYxcFjv7HsL7r0qQuKqBWdU-62Lk" alt="Sandwich" style="width:100%"></a>
+                <h3>NYU Sandwich</h3>
+                <button>Add to Cart</button>
+            
+        </div>
+            <div style="overflow:auto;padding-left:15%;margin-right: 20%;">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
+                <!-- First Photo Grid-->
+           </div>
+       
+
+        <!--  extra stuff
+        <!-- About Section
+        <div class="w3-container w3-padding-32 w3-center">
+            <h3>About Me, The Food Man</h3><br>
+            <img src="/w3images/chef.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
+            <div class="w3-padding-32">
+                <h4><b>I am Who I Am!</b></h4>
+                <h6><i>With Passion For Real, Good Food</i></h6>
+                <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+            </div>
+        </div>
+        <hr>
+
+
+        <footer class="w3-row-padding w3-padding-32">
+            <div class="w3-third">
+                <h3>FOOTER</h3>
+                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+            </div>
+
+            <div class="w3-third">
+                <h3>BLOG POSTS</h3>
+                <ul class="w3-ul w3-hoverable">
+                    <li class="w3-padding-16">
+                        <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
+                        <span class="w3-large">Lorem</span><br>
+                        <span>Sed mattis nunc</span>
+                    </li>
+                    <li class="w3-padding-16">
+                        <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
+                        <span class="w3-large">Ipsum</span><br>
+                        <span>Praes tinci sed</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="w3-third w3-serif">
+                <h3>POPULAR TAGS</h3>
+                <p>
+                    <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dinner</span>
+                    <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Salmon</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">France</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Drinks</span>
+                    <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Flavors</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cuisine</span>
+                    <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Chicken</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dressing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fried</span>
+                    <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fish</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Duck</span>
+                </p>
+            </div>
+        </footer>
+        -->
+        <!-- End page content -->
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
 
 </body>
 </html>
