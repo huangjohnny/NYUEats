@@ -3,11 +3,10 @@ from flask import Flask, render_template
 from flask_mysqldb import MySQL
 
 app = Flask(__name__)
-app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_HOST'] = '127.0.0.1'	#not localhost since db wants 127.0.0.1 not 0.0.0.0
 app.config['MYSQL_USER'] = 'ubuntu'
 app.config['MYSQL_PASSWORD'] = 'cafe'
 app.config['MYSQL_DB'] = 'cafeteria'
-app.config['MYSQL_PORT'] = '80'
 mysql = MySQL(app)
 cur = mysql.connection.cursor()
 
