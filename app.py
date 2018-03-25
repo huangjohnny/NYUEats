@@ -8,7 +8,7 @@ app.config['MYSQL_USER'] = 'ubuntu'
 app.config['MYSQL_PASSWORD'] = 'cafe'
 app.config['MYSQL_DB'] = 'cafeteria'
 mysql = MySQL(app)
-mysql.connection.autocommit(True)
+#mysql.connection.autocommit(True)
 cur = mysql.connection.cursor()
 
 app.secret_key = os.urandom(24)
@@ -32,15 +32,15 @@ def menu():
 	return render_template('menu.html')
 
 @app.route('/detail')
-def menu():
+def detail():
 	return render_template('detail.html')
 
 @app.route('/checkout')
-def menu():
+def checkout():
 	return render_template('checkout.html')
 
 @app.route('/pickuptime')
-def menu():
+def pickuptime():
 	return render_template('pickuptime.html')
 
 #test connection to MySQL database
@@ -51,20 +51,22 @@ def connect():
 	return str(result)
 
 #test creating a order with a nyu id
-@app.route('/create/order')
-def order():
+#@app.route('/create/order')
+#def order():
 	#get nyu id from html form and create table with the same name
-	netid = 
-	cur.execute('''CREATE TABLE %s (name VARCHAR(20) NOT NULL, time TIME)''', netid)
+	#netid = 
+	#cur.execute('''CREATE TABLE %s (name VARCHAR(20) NOT NULL, time TIME)''', netid)
 	#get pickup time from html form and insert to table
-	pickuptime = time.strptime(       , '%Y-%m-%d %H:%M:%S')
-	pickuptime = time.strftime('%Y-%m-%d %H:%M:%S', pickuptime)
-	cur.execute('''INSERT INTO %s (time) VALUES (%s)''', (netid, pickuptime))
+	#pickuptime = time.strptime(       , '%Y-%m-%d %H:%M:%S')
+	#pickuptime = time.strftime('%Y-%m-%d %H:%M:%S', pickuptime)
+	#cur.execute('''INSERT INTO %s (time) VALUES (%s)''', (netid, pickuptime))
 	#insert orders into table
-	for item in session['orders']:
-		cur.execute('''INSERT INTO %s (name) VALUES (%s)''', (netid, item))
+	#for item in session['orders']:
+		#cur.execute('''INSERT INTO %s (name) VALUES (%s)''', (netid, item))
 	#clear the cart
-	session.pop('orders')
+	#session.pop('orders')
+	#commit at the very end
+
 
 if __name__ == "__main__":
 	app.run(debug=True)
